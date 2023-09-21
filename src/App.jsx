@@ -33,7 +33,7 @@ function App () {
   }
 
   const handleDelete = (name) => {
-    setCount(count - 1)
+    if (count > 0) { setCount(count - 1) }
     // If cont is 0, remove the diner from the list
     if (diners.find(diner => diner.name === name)) {
       const newDiners = diners.map(diner => {
